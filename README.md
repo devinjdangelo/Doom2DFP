@@ -39,7 +39,7 @@ features and hyperparameters were matched as closely as possible to the original
 Battle2 scenario has a relatively small action space to doom singleplayer but even still dividing the action space did not adversely affect the final performance of the agent and seems to boost performance
 when there are fewer examples to learn from.
 
-![Battle2 Performance](/illustrations/battle2_graph.PNG)
+![Battle2 Performance](/illustrations/battle.png)
 
 For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. 
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
