@@ -46,7 +46,7 @@ The agent successfully learned to explore the majority of the map and kill enemi
 
 ![Entryway Performance](/illustrations/entrywaygraph.PNG)
 
-<img src="/illustrations/entryway.gif" width="500">
+<img src="/illustrations/entryway.gif" width="400">
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectibly on previously unseen levels.
 
