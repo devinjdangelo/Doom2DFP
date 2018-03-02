@@ -42,7 +42,7 @@ features and hyperparameters were matched as closely as possible to the original
 
 ![Battle2 Performance](/illustrations/battle.png)
 
-For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. 
+For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. The difficulty is set to "Hurt me plenty" which is challenging for most human players.
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
 
 <img src="/illustrations/entrywaygraph.PNG" width="800">
