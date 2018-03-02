@@ -30,7 +30,7 @@ this actually changes the behavior of pressing buttons in the current step. For 
 If instead you hold down the shoot button, you will fire randomly in a cone. Another example is pressing the "use" button only has any effect when you first press it down. Holding it down will have no effect. 
 To have any chance of learning these dependencies, the agent must remember in each step if it was recently pressing a button down.
 
-![Modified DFP Network](/illustrations/modified_dfp.png)
+![Modified DFP Network](/illustrations/modified_dfp.PNG)
 
 ## Results
 
@@ -39,12 +39,12 @@ features and hyperparameters were matched as closely as possible to the original
 Battle2 scenario has a relatively small action space to doom singleplayer but even still dividing the action space did not adversely affect the final performance of the agent and seems to boost performance
 when there are fewer examples to learn from.
 
-![Battle2 Performance](/illustrations/battle2_graph.png)
+![Battle2 Performance](/illustrations/battle2_graph.PNG)
 
 For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. 
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
 
-![Entryway Performance](/illustrations/entrywyaygraph.png)
+![Entryway Performance](/illustrations/entrywyaygraph.PNG)
 <img src="(/illustrations/entryway.gif)" width="300">
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectibly on previously unseen levels.
