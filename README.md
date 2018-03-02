@@ -1,5 +1,8 @@
 # Human Level Control of Doom
 
+<img src="/illustrations/entryway.gif" width="400">
+
+
 Previous papers have demonstrated the effectiveness of deep reinforcement learning techniques in the [Vizdoom environment](http://vizdoom.cs.put.edu.pl/). [Dosovitskiy and Koltun (2016)](https://arxiv.org/pdf/1611.01779.pdf)
 successfully trained an agent to navigate a complicated maze while engaging enemies. However, their environment is still significantly simplified compared to the full Doom singleplayer experience
 intended for human players. For example, there is only 1 type of enemy which dies instantly with only 1 hit. The agent has only 1 weapon and no ability to change weapons and can also not jump
@@ -44,7 +47,6 @@ The agent successfully learned to explore the majority of the map and kill enemi
 
 <img src="/illustrations/entrywaygraph.PNG" width="800">
 
-<img src="/illustrations/entryway.gif" width="400">
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectably on previously unseen levels.
 
