@@ -12,7 +12,7 @@ Direct Future Predicition (DFP) converts reinforcement learning into a self supe
 various points in the future. Then, the agent observes the actual ground truth values of those measurements in the future and uses them to train a deep neural network. This method is found to
 outperform A3C substantially. The network used in [Dosovitskiy and Koltun (2016)](https://arxiv.org/pdf/1611.01779.pdf) is sketched below. 
 
-![Base DFP Network](/illustrations/base_dfp.png)
+![Base DFP Network](/illustrations/base_dfp.PNG)
 
 The expectation stream outputs the expected value of the measurements at each output average over all possible actions. The action stream outputs the "advantage" of each action by forcing the
 average over all actions at each time step to be 0. I modify the action stream further into independent groups. The idea is that the decision of whether to fire
