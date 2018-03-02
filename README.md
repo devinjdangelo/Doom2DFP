@@ -44,7 +44,7 @@ when there are fewer examples to learn from.
 For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. 
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
 
-<img src="/illustrations/entrywaygraph.PNG" width="400">
+<img src="/illustrations/entrywaygraph.PNG" width="600">
 
 <img src="/illustrations/entryway.gif" width="400">
 
