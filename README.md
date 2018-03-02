@@ -1,4 +1,4 @@
-# Human Level Control of Doom
+# Doom2 AI
 
 <img src="/illustrations/entryway.gif" width="400">
 
