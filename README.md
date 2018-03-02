@@ -45,8 +45,8 @@ For the first test on full Doom singleplayer, I train an agent only on the first
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
 
 ![Entryway Performance](/illustrations/entrywyaygraph.PNG)
-![entryway gif](/illustrations/entryway.gif | width=150)
 
+<img src="/illustrations/entryway.gif" width="100">
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectibly on previously unseen levels.
 
