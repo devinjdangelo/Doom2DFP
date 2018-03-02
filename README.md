@@ -56,5 +56,5 @@ Requirments:
 - Vizdoom
 - Tensorflow
 
-The Battle2 folder contains all of the code to replicate the test on the battle2 scenario. The DFP folder contains the code to replicate the test on Doom 2 Entryway. Because I am not legally allowed to redistribute
+The Battle2 folder contains all of the code to replicate the test on the Battle2 scenario. The DFP folder contains the code to replicate the test on Doom 2 Entryway. Because I am not legally allowed to redistribute
 Doom2.wad, you must obtain Doom 2 and place the file doom2.wad in the folder for the code to run. I am currently testing DFP LSTM to find a training regime which works as well or better than DFP on the entryway scenario.
