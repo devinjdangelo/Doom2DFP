@@ -45,7 +45,9 @@ features and hyperparameters were matched as closely as possible to the original
 For the first test on full Doom singleplayer, I train an agent only on the first level of Doom 2, Entryway. The first test is DFP augmented only with the action stream split into 4. The difficulty is set to "Hurt me plenty" which is challenging for most human players.
 The agent successfully learned to explore the majority of the map and kill enemies with a variety of weapons. 
 
-<img src="/illustrations/entrywaygraph.PNG" width="800">
+<img src="/illustrations/entrywaykills.PNG" width="400">
+<img src="/illustrations/entrywayexplored.PNG" width="400">
+
 
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectably on previously unseen levels.
