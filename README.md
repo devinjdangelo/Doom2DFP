@@ -46,15 +46,15 @@ The agent successfully learned to explore the majority of the map and kill enemi
 
 ![Entryway Performance](/illustrations/entrywyaygraph.PNG)
 
-<img src="/illustrations/entryway.gif" width="600">
+<img src="/illustrations/entryway.gif" width="500">
 
 I am currently testing DFP modified with pixel control and LSTM. My hope is to obtain a model robust enough to learn many levels simultaneously and perform respectibly on previously unseen levels.
 
 ## Code
 
 Requirments:
-	- Vizdoom
-	- Tensorflow
+- Vizdoom
+- Tensorflow
 
 The battle2 folder contains all of the code to replicate the test on the battle2 scenario. The DFP folder contains the code to replicate the test on Doom 2 Entryway. Since I am not legally allowed to redistribute
 Doom2.wad, you must obtain Doom 2 and place the file doom2.wad in the folder for the code to run. I am currently testing DFP LSTM to find a training regime which works as well or better than DFP on the entryway scenario.
