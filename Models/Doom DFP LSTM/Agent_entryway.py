@@ -30,6 +30,8 @@ class ExperienceBuffer():
         self.experience_dimension = 9
         self.max_sequence_length = max_sequence_length
         
+        self.per_smoothing = 0.5 #coefficient for per 
+        
     
     def add(self,episode,score):
         if len(self.episodes) >= self.max_episodes:
@@ -85,6 +87,7 @@ class ExperienceBuffer():
         #probability to sample each episode
         score_lengths = np.stack([self.episode_scores,self.episode_lengths])
         score_product = np.prod(score_lengths,axis=0)
+        score_product = np.power(score_product,self.per_smoothing)
         probabilities = score_product/np.sum(score_product)
         return probabilities.tolist()
         
@@ -239,7 +242,7 @@ class Worker():
         
         #score episodes by (1+kills)*(explored) such that 1% increase in either -> ~1% increase in score
         #but neither can be 0. We will prioritize replay episodes with higher scores
-        score = (measurements[-1,4]+1) * (measurements[-1,6])
+        score = (measurements[-1,4]) + (measurements[-1,6])/3
         
         m_present = measurements[:,(-num_predict_measurements):]
         targets = get_f(m_present,self.offsets) #Generate targets using measurements and offsets
@@ -764,7 +767,7 @@ if __name__ == '__main__':
     offsets = [2,4,8,16,32,64] # Set of temporal offsets
     load_model = False #ther to load a saved model
     train = True #Whether to train the network
-    model_path = 'C:/Users/djdev/Documents/tensorflow models/LSTM noPC' #Path to save the model to
+    model_path = 'C:/Users/djdev/Documents/tensorflow models/LSTM lessPER' #Path to save the model to
     gif_path = './frames_goals' #Path to save gifs of agent performance to
     exploration = 'bayesian'
     
@@ -798,7 +801,7 @@ if __name__ == '__main__':
             exp_buff,[num_observe_measurements,num_predict_measurements],
             gif_path,exploration,xdim,ydim,use_pc,starting_learning_rate,
             half_learning_rate_every_n_steps,main_weight,pc_weight)
-    saver = tf.train.Saver(max_to_keep=5,keep_checkpoint_every_n_hours=12)
+    saver = tf.train.Saver(max_to_keep=5,keep_checkpoint_every_n_hours=4)
     
     with tf.Session() as sess:
         if load_model == True:
