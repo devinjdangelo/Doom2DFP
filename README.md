@@ -17,7 +17,7 @@ outperform A3C substantially. The network used in [Dosovitskiy and Koltun (2016)
 
 ![Base DFP Network](/illustrations/base_dfp.PNG)
 
-The expectation stream outputs the expected value of the measurements at each output average over all possible actions. The action stream outputs the "advantage" of each action by forcing the
+The expectation stream outputs the expected value of the measurements at each output averaged over all possible actions. The action stream outputs the "advantage" of each action by forcing the
 average over all actions at each time step to be 0. I modify the action stream further into independent groups. The idea is that the decision of whether to fire
 your weapon at a particular time step should be independent of the choice of which direction to move. If you are aimed at an enemy, you should fire reguardless of how you intend to move next. 
 This also dramatically reduces the number of outputs required from the network when we have a large action space. In full Doom singleplayer, you need at least 12 buttons to perform all required
