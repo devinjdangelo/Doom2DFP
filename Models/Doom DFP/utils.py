@@ -98,7 +98,7 @@ def detect_hits(labels,agent,melee=False):
             #convert distances to angle tolerances (your aim can be more off when you are close)
          angle_tolerance = max_angle_to_hit(distances)
          hit_differences = np.absolute(monster_angles - agent[2])
-         hits = [diff<tol for diff in hit_differences for tol in angle_tolerance]
+         hits = [diff<angle_tolerance[i] for i,diff in enumerate(hit_differences) for tol in angle_tolerance]
          any_hit = np.amax(hits)
       else:
          any_hit = False
